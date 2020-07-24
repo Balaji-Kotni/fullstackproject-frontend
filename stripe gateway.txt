@@ -1,0 +1,43 @@
+const stripe = require("stripe")("sk_test_51Gz6c9DSzpbeolqNPPUSPwd4tDZDvqIWzK1n7gHtle8w3Tkir073hauE3DPrOXmRoXZl4lDrS8Kf0K60EWi6DZ3e00IVHJOACS")
+const uuid = require('uuid/v4');
+
+
+
+
+exports.makepayment = (req, res) => {
+    const {products, token} = req.body;
+    let amount = 0;
+        if (products){
+            products.map(p => {
+           amount = amount + p.price;
+        });
+    }
+        
+        const idempotencyKey = uuid()
+
+        return stripe.customers
+        .create({
+          email: token.email,
+          source: token.id
+    }). then(customer => {
+            stripe.charges.create({
+              amount: amount,
+              currency: 'inr',
+              customer: customer.id,
+              receipt_email: token.email,
+              shipping: {
+                  name: token.card.name,
+                  address:{
+                  line1:token.card.address_line1,
+                  line2:token.card.address_line2,
+                  city: token.card.address_city,
+                  state: token.card.address.state,
+                  country: token.card.address.country,
+                  postal_code: token.card.address_zip
+                }
+              } 
+            }, {idempotencyKey:idempotencyKey})
+            .then(result=> res.status(200).json(result))
+            .catch(err=> console.log(err))
+        })
+};
