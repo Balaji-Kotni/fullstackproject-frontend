@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fondamento&display=swap");
+.btn,
+.jumbotron,
+.nav :hover {
+    border-radius: 0px;
+}
+
+body {
+    background: #ffffff;
+    height: 100%;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    /* margin-top: 50px; */
+
+    background: linear-gradient(to top, #000000 0%, #ffffff 100%);
+}
+
+.continer {
+    width: 100%;
+    /* margin: 100%; */
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.product-bottom {
+    color: #28a745;
+    font-size: 10px;
+}
+
+.image-fixed {
+    /* background-size: cover; */
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    margin-top: -300%;
+    left: auto;
+    position: absolute;
+}
+
+.animate__animated1.animate__bounce {
+    --animate-duration: 2s;
+}
+.animate__animated2.animate__bounce {
+    --animate-duration: 3s;
+}
+.intro .inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20%;
+}
+
+.content h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 600%;
+    font-weight: 100%;
+    color: #e1efe9;
+    line-height: 70%;
+    margin-bottom: 200px;
+}
+.button {
+    font-family: "Fondamento", sans-serif;
+    font-size: 135%;
+    color: #28a745;
+    text-transform: uppercase;
+    text-decoration-line: none;
+    border: solid #63543d;
+    /* margin-bottom: -70%; */
+    margin-top: 300px;
+    padding: 10px 20px;
+    border-radius: 9px;
+}
+.button:hover {
+    color: #e1efe9;
+    border: solid #e1efe9 2px;
+    text-decoration: none;
+}
+
+.animate__animated animate__shakeY {
+    --animate-duration: 2s;
+}
+.intro {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background: url(https://cdn.pixabay.com/photo/2019/10/20/11/51/mountains-4563464_1280.jpg);
+    display: table;
+    top: 0;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.title {
+    margin-bottom: 120px;
+    margin-top: 180px;
+}
