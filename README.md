@@ -1,3 +1,5 @@
+This is a e-commerce webapp which is published at netlify. This is made by Balaji Kotni.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
